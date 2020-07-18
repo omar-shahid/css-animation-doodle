@@ -2,6 +2,7 @@ const runner = document.querySelector("#runner")
 const background = document.querySelector(".background-clip")
 const runnerImage = document.querySelector("#runner-image")
 const eggman = document.querySelector("#eggman")
+const cloud = document.querySelector(".cloud")
 
 let speed = 0.6
 let bgSpeed = 1
@@ -21,6 +22,15 @@ const backg = background.animate([
     { right: "100%" }
 ], {
     duration: 1000,
+    iterations: Infinity,
+    easing: "linear"
+})
+
+cloud.animate([
+    { right: "-100%" },
+    { right: "100%" }
+], {
+    duration: 30000,
     iterations: Infinity,
     easing: "linear"
 })

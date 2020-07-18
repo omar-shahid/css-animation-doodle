@@ -45,3 +45,23 @@ body {
   filter: brightness(0.3);
   width: 209px;
 }
+
+#sun {
+  position: absolute;
+  z-index: -3;
+  width: 200px;
+  left: 599px;
+  top: 299px;
+}
+
+.cloud {
+  position: absolute;
+  display: flex;
+  z-index: -1;
+  right: 0;
+  top: 17px;
+  filter: brightness(0.2);
+}
+.cloud img {
+  width: 234px;
+}
