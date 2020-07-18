@@ -1,17 +1,18 @@
 const runner = document.querySelector("#runner")
 const background = document.querySelector(".background-clip")
-// const runnerImage = document.querySelector("#runner-image")
+const runnerImage = document.querySelector("#runner-image")
+const eggman = document.querySelector("#eggman")
 
-let speed = 1
+let speed = 0.6
 let bgSpeed = 1
 
 runner.animate([
-    { left: "624px" },
-    { left: "748px" },
-    { left: "548px" },
-    { left: "624px" },
+    { left: "224px" },
+    { left: "348px" },
+    { left: "448px" },
+    { left: "224px" },
 ], {
-    duration: 20000,
+    duration: 10000,
     iterations: Infinity
 }).play()
 
@@ -19,24 +20,34 @@ const backg = background.animate([
     { right: "0%" },
     { right: "100%" }
 ], {
-    duration: 3500,
+    duration: 1000,
     iterations: Infinity,
     easing: "linear"
 })
 
+eggman.animate([
+    { top: "0px" },
+    { top: "30px" },
+    { top: "0px" },
+], {
+    duration: 1000,
+    iterations: Infinity,
+    easing: "ease-in-out"
+})
+
 document.addEventListener("click", (e) => {
     speed += .1
-    if (bgSpeed === 20)
+    if (bgSpeed === 50)
         return
     bgSpeed += 1
     backg.updatePlaybackRate(bgSpeed)
 
 
-    // runnerImage.setAttribute("speed", speed)
+    runnerImage.setAttribute("speed", speed)
     console.log(bgSpeed)
 })
 
 
 
 
-// runnerImage.setAttribute("speed", speed)
+runnerImage.setAttribute("speed", speed)

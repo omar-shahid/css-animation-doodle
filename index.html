@@ -6,16 +6,40 @@
     <title>Project 4a</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
+    <script>
+      if (
+        "registerElement" in document &&
+        "createShadowRoot" in HTMLElement.prototype &&
+        "import" in document.createElement("link") &&
+        "content" in document.createElement("template")
+      ) {
+        // We're using a browser with native WC support!
+      } else {
+        document.write(
+          '<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>'
+        )
+      }
+    </script>
+    <link
+      rel="import"
+      href="https://raw.githubusercontent.com/geelen/x-gif/gh-pages/dist/x-gif.html"
+    />
   </head>
   <body>
+    <img src="./images/eggman.webp" id="eggman" alt="Eggman" />
     <div class="background-clip">
       <div id="background-1"></div>
       <div id="background-2"></div>
     </div>
-    <img src="./images/flash.gif" alt="runner" id="runner" />
-    <!-- <div id="runner">
-      <x-gif speed="1.0" id="runner-image" src="./images/flash.gif"></x-gif>
-    </div> -->
+    <!-- <img
+      src="https://mforum.ist/media/gif-sonic-running-2-gif.21665/full"
+      alt="runner"
+      id="runner"
+      style="width: 268px;"
+    /> -->
+    <div id="runner" style="width: 268px;">
+      <x-gif speed="0.09" id="runner-image" src="./images/sonic.gif"></x-gif>
+    </div>
     <div id="ground"></div>
   </body>
 </html>

@@ -39,3 +39,9 @@ body {
   position: relative;
   width: 200vw;
 }
+
+#eggman {
+  position: absolute;
+  filter: brightness(0.3);
+  width: 209px;
+}
